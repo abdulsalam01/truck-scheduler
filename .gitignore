@@ -1,0 +1,8 @@
+node_modules
+bower_components
+public
+dist
+package-lock**
+yarn**
+yarn-error.log
+yarn.lock

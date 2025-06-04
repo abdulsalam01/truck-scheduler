@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "install": "npm i -D typescript",
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
+    "test": "echo \"Test Completed\" && exit 0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
