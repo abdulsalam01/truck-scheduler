@@ -16,16 +16,16 @@ export function getDepartureDates(
     monthDays: number
 ): number[] {
     const departures: number[] = [];
-    const parity = truckNumber % 2; // 1 = odd, 0 = even
+    const parity = truckNumber % 2; // 1 = odd, 0 = even.
 
     // Determine this truck’s index among its parity group:
-    // - For odd trucks (1, 3, 5, …): index = (truckNumber + 1) / 2
-    // - For even trucks (2, 4, 6, …): index = truckNumber / 2
+    // - For odd trucks (1, 3, 5, …): index = (truckNumber + 1) / 2,
+    // - For even trucks (2, 4, 6, …): index = truckNumber / 2.
     const groupIndex = parity === 1 ? (truckNumber + 1) / 2 : truckNumber / 2;
 
     // Initial departure date = 
-    //   if odd:  (2 * (groupIndex - 1) + 1)  → 1, 3, 5, …
-    //   if even: (2 * (groupIndex - 1) + 2)  → 2, 4, 6, …
+    //   if odd:  (2 * (groupIndex - 1) + 1)  → 1, 3, 5, …,
+    //   if even: (2 * (groupIndex - 1) + 2)  → 2, 4, 6, ….
     let nextDeparture = parity === 1
         ? 2 * (groupIndex - 1) + 1
         : 2 * (groupIndex - 1) + 2;
