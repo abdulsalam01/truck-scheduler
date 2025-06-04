@@ -1,7 +1,7 @@
 ## by Abdul Salam
 # Truck Scheduling Calculator
 
-This repository contains a TypeScript solution to determine how many trucks are needed to ensure daily deliveries over a 30-day month, given each truck’s trip duration, maintenance time, and an odd/even departure rule.
+This repository contains a TypeScript solution to determine how many trucks are needed to ensure daily deliveries over a X-day month (variables, can changed), given each truck’s trip duration, maintenance time, and an odd/even departure rule.
 
 ## Overview
 
@@ -27,7 +27,13 @@ Built with two main functions:
 ## Files
 
 * **`index.ts`**
-  Contains `getDepartureDates`, `findMinimumTrucks`, and a `main()` function that prints out each truck’s schedule and the total count.
+  Contains a `main()` function that prints out each truck’s schedule and the total count.
+
+* **`src/departure.ts`**
+  Contains a `getDepartureDates()` function that calculates all valid departure dates for a single truck, based on its number and the given durations.
+
+* **`src/truck.ts`**
+  Contains a `findMinimumTrucks()` function that iterates from 1 truck up to `monthDays` trucks to find the minimum count such that there’s at least one departure scheduled on every day of the month.
 
 * **`tsconfig.json`**
   TypeScript configuration file (compile targets, module format, etc.).
@@ -69,7 +75,7 @@ All code is written in TypeScript. Before running, compile to JavaScript and the
 
    Under the hood, `npm start` does:
 
-   * `tsc` → compiles `src/index.ts` to `dist/index.js`
+   * `tsc` → compiles `index.ts` to `dist/index.js`
    * `node dist/index.js` → runs the compiled code
 
 3. **Test**
