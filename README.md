@@ -108,7 +108,7 @@ All code is written in TypeScript. Before running, compile to JavaScript and the
 
 ## Configuration
 
-You can adjust the key parameters directly in `index.ts` inside the `main()` call:
+Adjust the key parameters directly in `index.ts` inside the `main()` call:
 
 ```ts
 function main(monthDays: number = 30, tripDuration: number = 3, maintenanceDays: number = 1) {
